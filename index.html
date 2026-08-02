@@ -84,7 +84,7 @@
         <section class="category-section">
             <div class="category-header">
                 <h2 class="category-title">📜 Government & Category Certificates</h2>
-                <span class="category-count">6 Docs</span>
+                <span class="category-count">5 Docs</span>
             </div>
             <div class="doc-grid">
                 <div class="doc-card" data-title="Caste Certificate category Bihar">
@@ -94,14 +94,6 @@
                         <p class="doc-type">PDF Document</p>
                     </div>
                     <a href="files/caste new.pdf" target="_blank" class="doc-action">View Document</a>
-                </div>
-                <div class="doc-card" data-title="Income Certificate state">
-                    <div>
-                        <span class="doc-icon">💰</span>
-                        <h3 class="doc-name">Income Certificate</h3>
-                        <p class="doc-type">PDF Document</p>
-                    </div>
-                    <a href="files/Income Certificate.pdf" target="_blank" class="doc-action">View Document</a>
                 </div>
                 <div class="doc-card" data-title="Income Certificate 2026 2027">
                     <div>
@@ -290,8 +282,9 @@
             });
 
             sections.forEach(section => {
-                const visibleCards = section.querySelectorAll('.doc-card[style*="display: flex"]');
-                if (visibleCards.length === 0 && input !== '') {
+                const cards = section.querySelectorAll('.doc-card');
+                const hasVisible = Array.from(cards).some(card => card.style.display !== 'none');
+                if (!hasVisible && input !== '') {
                     section.style.display = 'none';
                 } else {
                     section.style.display = 'block';
