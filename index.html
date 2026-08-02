@@ -5,30 +5,307 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atul's Documents</title>
+    <title>Atul's Document Repository</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
-    <ul>
-        <li><a href="files/Atul_Photo.jpeg" target="_blank">Passport size Photo</a></li>
-        <li><a href="files/Atul_Sign.jpeg" target="_blank">Signature</a></li>
-        <li><a href="files/Atul 10th Certificate.pdf" target="_blank">10th Certificate</a></li>
-        <li><a href="files/Atul 10th Marksheet.pdf" target="_blank">10th Marksheet</a></li>
-        <li><a href="files/Atul 12th Provisional Certificate .pdf" target="_blank">12th Certificate</a></li>
-        <li><a href="files/Atul 12th marksheet.pdf" target="_blank">12th Marksheet</a></li>
-        <li><a href="files/Atul PAN.pdf" target="_blank">PAN</a></li>
-        <li><a href="files/atul_eaadhaar.pdf" target="_blank">Aadhaar</a></li>
-        <li><a href="files/atul_dl.pdf" target="_blank">Driving License</a></li>
-        <li><a href="files/Atul Sah Resume.pdf" target="_blank">Resume</a></li>
-        <li><a href="files/caste new.pdf" target="_blank">Caste Certificate</a></li>
-        <li><a href="files/Income Certificate.pdf" target="_blank">Income Certificate</a></li>
-        <li><a href="files/Residential Certificate.pdf" target="_blank">Residence Certificate</a></li>
-        <li><a href="files/Atul BCA Semester 1 Marksheet.pdf" target="_blank">BCA Semester 1 Marksheet</a></li>
-        <li><a href="files/Atul BCA Semester 2 Marksheet .pdf" target="_blank">BCA Semester 2 Marksheet</a></li>
-        <li><a href="files/Atul BCA Semester 3 Marksheet .pdf" target="_blank">BCA Semester 3 Marksheet</a></li>
-    </ul>
+    <div class="container">
+        <header>
+            <h1 class="header-title">Atul's Document Repository</h1>
+            <p class="header-subtitle">Centralized verified personal, academic, and professional documents</p>
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-input" placeholder="🔍 Search documents (e.g. MCA, Aadhaar, OBC, 10th)..." onkeyup="filterDocs()">
+            </div>
+        </header>
+
+        <!-- Personal & Identity -->
+        <section class="category-section">
+            <div class="category-header">
+                <h2 class="category-title">👤 Personal Identity & Resume</h2>
+                <span class="category-count">6 Docs</span>
+            </div>
+            <div class="doc-grid">
+                <div class="doc-card" data-title="Passport size Photo image picture">
+                    <div>
+                        <span class="doc-icon">🖼️</span>
+                        <h3 class="doc-name">Passport Size Photo</h3>
+                        <p class="doc-type">JPEG Image</p>
+                    </div>
+                    <a href="files/Atul_Photo.jpeg" target="_blank" class="doc-action">View Image</a>
+                </div>
+                <div class="doc-card" data-title="Signature sign image picture">
+                    <div>
+                        <span class="doc-icon">✍️</span>
+                        <h3 class="doc-name">Digital Signature</h3>
+                        <p class="doc-type">JPEG Image</p>
+                    </div>
+                    <a href="files/Atul_Sign.jpeg" target="_blank" class="doc-action">View Image</a>
+                </div>
+                <div class="doc-card" data-title="Aadhaar Card eAadhaar identity UIDAI">
+                    <div>
+                        <span class="doc-icon">🪪</span>
+                        <h3 class="doc-name">Aadhaar Card</h3>
+                        <p class="doc-type">PDF Document</p>
+                    </div>
+                    <a href="files/atul_eaadhaar.pdf" target="_blank" class="doc-action">View Document</a>
+                </div>
+                <div class="doc-card" data-title="PAN Card income tax identity">
+                    <div>
+                        <span class="doc-icon">💳</span>
+                        <h3 class="doc-name">PAN Card</h3>
+                        <p class="doc-type">PDF Document</p>
+                    </div>
+                    <a href="files/Atul PAN.pdf" target="_blank" class="doc-action">View Document</a>
+                </div>
+                <div class="doc-card" data-title="Driving License DL license transport">
+                    <div>
+                        <span class="doc-icon">🚗</span>
+                        <h3 class="doc-name">Driving License</h3>
+                        <p class="doc-type">PDF Document</p>
+                    </div>
+                    <a href="files/atul_dl.pdf" target="_blank" class="doc-action">View Document</a>
+                </div>
+                <div class="doc-card" data-title="Atul Sah Resume CV bio data profile">
+                    <div>
+                        <span class="doc-icon">📄</span>
+                        <h3 class="doc-name">Atul Sah Resume</h3>
+                        <p class="doc-type">PDF Document</p>
+                    </div>
+                    <a href="files/Atul Sah Resume.pdf" target="_blank" class="doc-action">View Document</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Government & Category Certificates -->
+        <section class="category-section">
+            <div class="category-header">
+                <h2 class="category-title">📜 Government & Category Certificates</h2>
+                <span class="category-count">6 Docs</span>
+            </div>
+            <div class="doc-grid">
+                <div class="doc-card" data-title="Caste Certificate category Bihar">
+                    <div>
+                        <span class="doc-icon">🏛️</span>
+                        <h3 class="doc-name">Caste Certificate</h3>
+                        <p class="doc-type">PDF Document</p>
+                    </div>
+                    <a href="files/caste new.pdf" target="_blank" class="doc-action">View Document</a>
+                </div>
+                <div class="doc-card" data-title="Income Certificate state">
+                    <div>
+                        <span class="doc-icon">💰</span>
+                        <h3 class="doc-name">Income Certificate</h3>
+                        <p class="doc-type">PDF Document</p>
+                    </div>
+                    <a href="files/Income Certificate.pdf" target="_blank" class="doc-action">View Document</a>
+                </div>
+                <div class="doc-card" data-title="Income Certificate 2026 2027">
+                    <div>
+                        <span class="doc-icon">💵</span>
+                        <h3 class="doc-name">Income Certificate (2026-27)</h3>
+                        <p class="doc-type">PDF Document</p>
+                    </div>
+                    <a href="files/Income Certificate 2026-27.pdf" target="_blank" class="doc-action">View Document</a>
+                </div>
+                <div class="doc-card" data-title="OBC NCL Certificate 2026 Bihar state">
+                    <div>
+                        <span class="doc-icon">📋</span>
+                        <h3 class="doc-name">OBC NCL Certificate 2026 (Bihar)</h3>
+                        <p class="doc-type">PDF Document</p>
+                    </div>
+                    <a href="files/Atul OBC NCL Certificate 2026 Bihar.pdf" target="_blank" class="doc-action">View Document</a>
+                </div>
+                <div class="doc-card" data-title="OBC NCL Certificate 2026 India central government">
+                    <div>
+                        <span class="doc-icon">🌐</span>
+                        <h3 class="doc-name">OBC NCL Certificate 2026 (India)</h3>
+                        <p class="doc-type">PDF Document</p>
+                    </div>
+                    <a href="files/Atul OBC NCL Certificate 2026 India.pdf" target="_blank" class="doc-action">View Document</a>
+                </div>
+                <div class="doc-card" data-title="Residential Certificate Residence Domicile address Bihar">
+                    <div>
+                        <span class="doc-icon">🏡</span>
+                        <h3 class="doc-name">Residence Certificate</h3>
+                        <p class="doc-type">PDF Document</p>
+                    </div>
+                    <a href="files/Residential Certificate.pdf" target="_blank" class="doc-action">View Document</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Secondary & Senior Secondary Education -->
+        <section class="category-section">
+            <div class="category-header">
+                <h2 class="category-title">🎓 School Education (10th & 12th)</h2>
+                <span class="category-count">4 Docs</span>
+            </div>
+            <div class="doc-grid">
+                <div class="doc-card" data-title="10th Certificate matriculation school board">
+                    <div>
+                        <span class="doc-icon">📜</span>
+                        <h3 class="doc-name">10th Certificate</h3>
+                        <p class="doc-type">PDF Document</p>
+                    </div>
+                    <a href="files/Atul 10th Certificate.pdf" target="_blank" class="doc-action">View Document</a>
+                </div>
+                <div class="doc-card" data-title="10th Marksheet matriculation marks school">
+                    <div>
+                        <span class="doc-icon">📊</span>
+                        <h3 class="doc-name">10th Marksheet</h3>
+                        <p class="doc-type">PDF Document</p>
+                    </div>
+                    <a href="files/Atul 10th Marksheet.pdf" target="_blank" class="doc-action">View Document</a>
+                </div>
+                <div class="doc-card" data-title="12th Provisional Certificate intermediate school board">
+                    <div>
+                        <span class="doc-icon">🎓</span>
+                        <h3 class="doc-name">12th Provisional Certificate</h3>
+                        <p class="doc-type">PDF Document</p>
+                    </div>
+                    <a href="files/Atul 12th Provisional Certificate .pdf" target="_blank" class="doc-action">View Document</a>
+                </div>
+                <div class="doc-card" data-title="12th Marksheet intermediate marks school">
+                    <div>
+                        <span class="doc-icon">📈</span>
+                        <h3 class="doc-name">12th Marksheet</h3>
+                        <p class="doc-type">PDF Document</p>
+                    </div>
+                    <a href="files/Atul 12th marksheet.pdf" target="_blank" class="doc-action">View Document</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Higher Education & Competitive Exams -->
+        <section class="category-section">
+            <div class="category-header">
+                <h2 class="category-title">🏛️ Higher Education & National Exams</h2>
+                <span class="category-count">9 Docs</span>
+            </div>
+            <div class="doc-grid">
+                <div class="doc-card" data-title="BCA Semester 1 Marksheet bachelor computer applications graduation">
+                    <div>
+                        <span class="doc-icon">📚</span>
+                        <h3 class="doc-name">BCA Semester 1 Marksheet</h3>
+                        <p class="doc-type">PDF Document</p>
+                    </div>
+                    <a href="files/Atul BCA Semester 1 Marksheet.pdf" target="_blank" class="doc-action">View Document</a>
+                </div>
+                <div class="doc-card" data-title="BCA Semester 2 Marksheet bachelor computer applications graduation">
+                    <div>
+                        <span class="doc-icon">📚</span>
+                        <h3 class="doc-name">BCA Semester 2 Marksheet</h3>
+                        <p class="doc-type">PDF Document</p>
+                    </div>
+                    <a href="files/Atul BCA Semester 2 Marksheet .pdf" target="_blank" class="doc-action">View Document</a>
+                </div>
+                <div class="doc-card" data-title="BCA Semester 3 Marksheet bachelor computer applications graduation">
+                    <div>
+                        <span class="doc-icon">📚</span>
+                        <h3 class="doc-name">BCA Semester 3 Marksheet</h3>
+                        <p class="doc-type">PDF Document</p>
+                    </div>
+                    <a href="files/Atul BCA Semester 3 Marksheet .pdf" target="_blank" class="doc-action">View Document</a>
+                </div>
+                <div class="doc-card" data-title="BCA Semester 6 Marksheet sem-6 bachelor computer applications">
+                    <div>
+                        <span class="doc-icon">📚</span>
+                        <h3 class="doc-name">BCA Semester 6 Marksheet</h3>
+                        <p class="doc-type">PDF Document</p>
+                    </div>
+                    <a href="files/BCA sem-6 Marksheet.pdf" target="_blank" class="doc-action">View Document</a>
+                </div>
+                <div class="doc-card" data-title="BCA Provisional Certificate graduation bachelor computer applications">
+                    <div>
+                        <span class="doc-icon">🎓</span>
+                        <h3 class="doc-name">BCA Provisional Certificate</h3>
+                        <p class="doc-type">PDF Document</p>
+                    </div>
+                    <a href="files/BCA Provisional Certificate.pdf" target="_blank" class="doc-action">View Document</a>
+                </div>
+                <div class="doc-card" data-title="BCA Degree Certificate bachelor computer applications degree">
+                    <div>
+                        <span class="doc-icon">📜</span>
+                        <h3 class="doc-name">BCA Degree Certificate</h3>
+                        <p class="doc-type">PDF Document</p>
+                    </div>
+                    <a href="files/BCA certificate.pdf" target="_blank" class="doc-action">View Document</a>
+                </div>
+                <div class="doc-card" data-title="MCA 4th Semester Marksheet master computer applications post graduation">
+                    <div>
+                        <span class="doc-icon">🎓</span>
+                        <h3 class="doc-name">MCA 4th Semester Marksheet</h3>
+                        <p class="doc-type">PDF Document</p>
+                    </div>
+                    <a href="files/MCA 4th Semester Marksheet.pdf" target="_blank" class="doc-action">View Document</a>
+                </div>
+                <div class="doc-card" data-title="MCA Provisional Certificate master computer applications post graduation degree">
+                    <div>
+                        <span class="doc-icon">📜</span>
+                        <h3 class="doc-name">MCA Provisional Certificate</h3>
+                        <p class="doc-type">PDF Document</p>
+                    </div>
+                    <a href="files/MCA provisional certificate.pdf" target="_blank" class="doc-action">View Document</a>
+                </div>
+                <div class="doc-card" data-title="UGC NET Dec 2025 Certificate national eligibility test NTA qualification">
+                    <div>
+                        <span class="doc-icon">🏆</span>
+                        <h3 class="doc-name">UGC NET Dec 2025 Certificate</h3>
+                        <p class="doc-type">PDF Document</p>
+                    </div>
+                    <a href="files/UGC NET Dec 2025 Certificate.pdf" target="_blank" class="doc-action">View Document</a>
+                </div>
+            </div>
+        </section>
+
+        <div id="noResults" class="no-results">
+            No matching documents found for your search query.
+        </div>
+
+        <footer>
+            <p>Direct File Repository &bull; RealAtulSah/doc-2002</p>
+        </footer>
+    </div>
+
+    <script>
+        function filterDocs() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const cards = document.querySelectorAll('.doc-card');
+            const sections = document.querySelectorAll('.category-section');
+            let totalVisible = 0;
+
+            cards.forEach(card => {
+                const title = card.getAttribute('data-title').toLowerCase();
+                const text = card.innerText.toLowerCase();
+                if (title.includes(input) || text.includes(input)) {
+                    card.style.display = 'flex';
+                    totalVisible++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            sections.forEach(section => {
+                const visibleCards = section.querySelectorAll('.doc-card[style*="display: flex"]');
+                if (visibleCards.length === 0 && input !== '') {
+                    section.style.display = 'none';
+                } else {
+                    section.style.display = 'block';
+                }
+            });
+
+            const noResults = document.getElementById('noResults');
+            if (totalVisible === 0) {
+                noResults.style.display = 'block';
+            } else {
+                noResults.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 
 </html>
