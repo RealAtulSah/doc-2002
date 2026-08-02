@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Atul's Document Repository</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -17,239 +17,300 @@
         <header>
             <h1 class="header-title">Atul's Document Repository</h1>
             <p class="header-subtitle">Centralized verified personal, academic, and professional documents</p>
-            <div class="search-container">
-                <input type="text" id="searchInput" class="search-input" placeholder="🔍 Search documents (e.g. MCA, Aadhaar, OBC, 10th)..." onkeyup="filterDocs()">
-            </div>
         </header>
 
+        <!-- Sticky Controls: Search Input & Category Filter Chips -->
+        <div class="sticky-controls">
+            <div class="search-container">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="searchInput" class="search-input" placeholder="Search (e.g. MCA, Aadhaar, OBC, 10th)..." oninput="filterDocs()">
+                <button type="button" id="clearBtn" class="clear-btn" onclick="clearSearch()" aria-label="Clear Search">&times;</button>
+            </div>
+            <div class="filter-chips">
+                <button type="button" class="chip active" onclick="filterCategory('all', this)">All (24)</button>
+                <button type="button" class="chip" onclick="filterCategory('personal', this)">Personal & ID</button>
+                <button type="button" class="chip" onclick="filterCategory('govt', this)">Government & Caste</button>
+                <button type="button" class="chip" onclick="filterCategory('school', this)">10th & 12th</button>
+                <button type="button" class="chip" onclick="filterCategory('higher', this)">BCA, MCA & NET</button>
+            </div>
+        </div>
+
         <!-- Personal & Identity -->
-        <section class="category-section">
+        <section id="sec-personal" class="category-section" data-cat="personal">
             <div class="category-header">
                 <h2 class="category-title">👤 Personal Identity & Resume</h2>
                 <span class="category-count">6 Docs</span>
             </div>
             <div class="doc-grid">
-                <div class="doc-card" data-title="Passport size Photo image picture">
-                    <div>
-                        <span class="doc-icon">🖼️</span>
-                        <h3 class="doc-name">Passport Size Photo</h3>
-                        <p class="doc-type">JPEG Image</p>
+                <div class="doc-card" data-title="Passport size Photo image picture photo">
+                    <div class="doc-card-body">
+                        <div class="doc-icon-wrapper">🖼️</div>
+                        <div class="doc-info">
+                            <h3 class="doc-name">Passport Size Photo</h3>
+                            <p class="doc-type">JPEG Image</p>
+                        </div>
                     </div>
-                    <a href="files/Atul_Photo.jpeg" target="_blank" class="doc-action">View Image</a>
+                    <a href="files/Atul_Photo.jpeg" target="_blank" rel="noopener" class="doc-action">View Image ↗</a>
                 </div>
                 <div class="doc-card" data-title="Signature sign image picture">
-                    <div>
-                        <span class="doc-icon">✍️</span>
-                        <h3 class="doc-name">Digital Signature</h3>
-                        <p class="doc-type">JPEG Image</p>
+                    <div class="doc-card-body">
+                        <div class="doc-icon-wrapper">✍️</div>
+                        <div class="doc-info">
+                            <h3 class="doc-name">Digital Signature</h3>
+                            <p class="doc-type">JPEG Image</p>
+                        </div>
                     </div>
-                    <a href="files/Atul_Sign.jpeg" target="_blank" class="doc-action">View Image</a>
+                    <a href="files/Atul_Sign.jpeg" target="_blank" rel="noopener" class="doc-action">View Image ↗</a>
                 </div>
                 <div class="doc-card" data-title="Aadhaar Card eAadhaar identity UIDAI">
-                    <div>
-                        <span class="doc-icon">🪪</span>
-                        <h3 class="doc-name">Aadhaar Card</h3>
-                        <p class="doc-type">PDF Document</p>
+                    <div class="doc-card-body">
+                        <div class="doc-icon-wrapper">🪪</div>
+                        <div class="doc-info">
+                            <h3 class="doc-name">Aadhaar Card</h3>
+                            <p class="doc-type">PDF Document</p>
+                        </div>
                     </div>
-                    <a href="files/atul_eaadhaar.pdf" target="_blank" class="doc-action">View Document</a>
+                    <a href="files/atul_eaadhaar.pdf" target="_blank" rel="noopener" class="doc-action">View Document ↗</a>
                 </div>
                 <div class="doc-card" data-title="PAN Card income tax identity">
-                    <div>
-                        <span class="doc-icon">💳</span>
-                        <h3 class="doc-name">PAN Card</h3>
-                        <p class="doc-type">PDF Document</p>
+                    <div class="doc-card-body">
+                        <div class="doc-icon-wrapper">💳</div>
+                        <div class="doc-info">
+                            <h3 class="doc-name">PAN Card</h3>
+                            <p class="doc-type">PDF Document</p>
+                        </div>
                     </div>
-                    <a href="files/Atul PAN.pdf" target="_blank" class="doc-action">View Document</a>
+                    <a href="files/Atul PAN.pdf" target="_blank" rel="noopener" class="doc-action">View Document ↗</a>
                 </div>
                 <div class="doc-card" data-title="Driving License DL license transport">
-                    <div>
-                        <span class="doc-icon">🚗</span>
-                        <h3 class="doc-name">Driving License</h3>
-                        <p class="doc-type">PDF Document</p>
+                    <div class="doc-card-body">
+                        <div class="doc-icon-wrapper">🚗</div>
+                        <div class="doc-info">
+                            <h3 class="doc-name">Driving License</h3>
+                            <p class="doc-type">PDF Document</p>
+                        </div>
                     </div>
-                    <a href="files/atul_dl.pdf" target="_blank" class="doc-action">View Document</a>
+                    <a href="files/atul_dl.pdf" target="_blank" rel="noopener" class="doc-action">View Document ↗</a>
                 </div>
                 <div class="doc-card" data-title="Atul Sah Resume CV bio data profile">
-                    <div>
-                        <span class="doc-icon">📄</span>
-                        <h3 class="doc-name">Atul Sah Resume</h3>
-                        <p class="doc-type">PDF Document</p>
+                    <div class="doc-card-body">
+                        <div class="doc-icon-wrapper">📄</div>
+                        <div class="doc-info">
+                            <h3 class="doc-name">Atul Sah Resume</h3>
+                            <p class="doc-type">PDF Document</p>
+                        </div>
                     </div>
-                    <a href="files/Atul Sah Resume.pdf" target="_blank" class="doc-action">View Document</a>
+                    <a href="files/Atul Sah Resume.pdf" target="_blank" rel="noopener" class="doc-action">View Document ↗</a>
                 </div>
             </div>
         </section>
 
         <!-- Government & Category Certificates -->
-        <section class="category-section">
+        <section id="sec-govt" class="category-section" data-cat="govt">
             <div class="category-header">
                 <h2 class="category-title">📜 Government & Category Certificates</h2>
                 <span class="category-count">5 Docs</span>
             </div>
             <div class="doc-grid">
                 <div class="doc-card" data-title="Caste Certificate category Bihar">
-                    <div>
-                        <span class="doc-icon">🏛️</span>
-                        <h3 class="doc-name">Caste Certificate</h3>
-                        <p class="doc-type">PDF Document</p>
+                    <div class="doc-card-body">
+                        <div class="doc-icon-wrapper">🏛️</div>
+                        <div class="doc-info">
+                            <h3 class="doc-name">Caste Certificate</h3>
+                            <p class="doc-type">PDF Document</p>
+                        </div>
                     </div>
-                    <a href="files/caste new.pdf" target="_blank" class="doc-action">View Document</a>
+                    <a href="files/caste new.pdf" target="_blank" rel="noopener" class="doc-action">View Document ↗</a>
                 </div>
                 <div class="doc-card" data-title="Income Certificate 2026 2027">
-                    <div>
-                        <span class="doc-icon">💵</span>
-                        <h3 class="doc-name">Income Certificate (2026-27)</h3>
-                        <p class="doc-type">PDF Document</p>
+                    <div class="doc-card-body">
+                        <div class="doc-icon-wrapper">💵</div>
+                        <div class="doc-info">
+                            <h3 class="doc-name">Income Certificate (2026-27)</h3>
+                            <p class="doc-type">PDF Document</p>
+                        </div>
                     </div>
-                    <a href="files/Income Certificate 2026-27.pdf" target="_blank" class="doc-action">View Document</a>
+                    <a href="files/Income Certificate 2026-27.pdf" target="_blank" rel="noopener" class="doc-action">View Document ↗</a>
                 </div>
                 <div class="doc-card" data-title="OBC NCL Certificate 2026 Bihar state">
-                    <div>
-                        <span class="doc-icon">📋</span>
-                        <h3 class="doc-name">OBC NCL Certificate 2026 (Bihar)</h3>
-                        <p class="doc-type">PDF Document</p>
+                    <div class="doc-card-body">
+                        <div class="doc-icon-wrapper">📋</div>
+                        <div class="doc-info">
+                            <h3 class="doc-name">OBC NCL Certificate 2026 (Bihar)</h3>
+                            <p class="doc-type">PDF Document</p>
+                        </div>
                     </div>
-                    <a href="files/Atul OBC NCL Certificate 2026 Bihar.pdf" target="_blank" class="doc-action">View Document</a>
+                    <a href="files/Atul OBC NCL Certificate 2026 Bihar.pdf" target="_blank" rel="noopener" class="doc-action">View Document ↗</a>
                 </div>
                 <div class="doc-card" data-title="OBC NCL Certificate 2026 India central government">
-                    <div>
-                        <span class="doc-icon">🌐</span>
-                        <h3 class="doc-name">OBC NCL Certificate 2026 (India)</h3>
-                        <p class="doc-type">PDF Document</p>
+                    <div class="doc-card-body">
+                        <div class="doc-icon-wrapper">🌐</div>
+                        <div class="doc-info">
+                            <h3 class="doc-name">OBC NCL Certificate 2026 (India)</h3>
+                            <p class="doc-type">PDF Document</p>
+                        </div>
                     </div>
-                    <a href="files/Atul OBC NCL Certificate 2026 India.pdf" target="_blank" class="doc-action">View Document</a>
+                    <a href="files/Atul OBC NCL Certificate 2026 India.pdf" target="_blank" rel="noopener" class="doc-action">View Document ↗</a>
                 </div>
                 <div class="doc-card" data-title="Residential Certificate Residence Domicile address Bihar">
-                    <div>
-                        <span class="doc-icon">🏡</span>
-                        <h3 class="doc-name">Residence Certificate</h3>
-                        <p class="doc-type">PDF Document</p>
+                    <div class="doc-card-body">
+                        <div class="doc-icon-wrapper">🏡</div>
+                        <div class="doc-info">
+                            <h3 class="doc-name">Residence Certificate</h3>
+                            <p class="doc-type">PDF Document</p>
+                        </div>
                     </div>
-                    <a href="files/Residential Certificate.pdf" target="_blank" class="doc-action">View Document</a>
+                    <a href="files/Residential Certificate.pdf" target="_blank" rel="noopener" class="doc-action">View Document ↗</a>
                 </div>
             </div>
         </section>
 
         <!-- Secondary & Senior Secondary Education -->
-        <section class="category-section">
+        <section id="sec-school" class="category-section" data-cat="school">
             <div class="category-header">
                 <h2 class="category-title">🎓 School Education (10th & 12th)</h2>
                 <span class="category-count">4 Docs</span>
             </div>
             <div class="doc-grid">
                 <div class="doc-card" data-title="10th Certificate matriculation school board">
-                    <div>
-                        <span class="doc-icon">📜</span>
-                        <h3 class="doc-name">10th Certificate</h3>
-                        <p class="doc-type">PDF Document</p>
+                    <div class="doc-card-body">
+                        <div class="doc-icon-wrapper">📜</div>
+                        <div class="doc-info">
+                            <h3 class="doc-name">10th Certificate</h3>
+                            <p class="doc-type">PDF Document</p>
+                        </div>
                     </div>
-                    <a href="files/Atul 10th Certificate.pdf" target="_blank" class="doc-action">View Document</a>
+                    <a href="files/Atul 10th Certificate.pdf" target="_blank" rel="noopener" class="doc-action">View Document ↗</a>
                 </div>
                 <div class="doc-card" data-title="10th Marksheet matriculation marks school">
-                    <div>
-                        <span class="doc-icon">📊</span>
-                        <h3 class="doc-name">10th Marksheet</h3>
-                        <p class="doc-type">PDF Document</p>
+                    <div class="doc-card-body">
+                        <div class="doc-icon-wrapper">📊</div>
+                        <div class="doc-info">
+                            <h3 class="doc-name">10th Marksheet</h3>
+                            <p class="doc-type">PDF Document</p>
+                        </div>
                     </div>
-                    <a href="files/Atul 10th Marksheet.pdf" target="_blank" class="doc-action">View Document</a>
+                    <a href="files/Atul 10th Marksheet.pdf" target="_blank" rel="noopener" class="doc-action">View Document ↗</a>
                 </div>
                 <div class="doc-card" data-title="12th Provisional Certificate intermediate school board">
-                    <div>
-                        <span class="doc-icon">🎓</span>
-                        <h3 class="doc-name">12th Provisional Certificate</h3>
-                        <p class="doc-type">PDF Document</p>
+                    <div class="doc-card-body">
+                        <div class="doc-icon-wrapper">🎓</div>
+                        <div class="doc-info">
+                            <h3 class="doc-name">12th Provisional Certificate</h3>
+                            <p class="doc-type">PDF Document</p>
+                        </div>
                     </div>
-                    <a href="files/Atul 12th Provisional Certificate .pdf" target="_blank" class="doc-action">View Document</a>
+                    <a href="files/Atul 12th Provisional Certificate .pdf" target="_blank" rel="noopener" class="doc-action">View Document ↗</a>
                 </div>
                 <div class="doc-card" data-title="12th Marksheet intermediate marks school">
-                    <div>
-                        <span class="doc-icon">📈</span>
-                        <h3 class="doc-name">12th Marksheet</h3>
-                        <p class="doc-type">PDF Document</p>
+                    <div class="doc-card-body">
+                        <div class="doc-icon-wrapper">📈</div>
+                        <div class="doc-info">
+                            <h3 class="doc-name">12th Marksheet</h3>
+                            <p class="doc-type">PDF Document</p>
+                        </div>
                     </div>
-                    <a href="files/Atul 12th marksheet.pdf" target="_blank" class="doc-action">View Document</a>
+                    <a href="files/Atul 12th marksheet.pdf" target="_blank" rel="noopener" class="doc-action">View Document ↗</a>
                 </div>
             </div>
         </section>
 
         <!-- Higher Education & Competitive Exams -->
-        <section class="category-section">
+        <section id="sec-higher" class="category-section" data-cat="higher">
             <div class="category-header">
                 <h2 class="category-title">🏛️ Higher Education & National Exams</h2>
                 <span class="category-count">9 Docs</span>
             </div>
             <div class="doc-grid">
                 <div class="doc-card" data-title="BCA Semester 1 Marksheet bachelor computer applications graduation">
-                    <div>
-                        <span class="doc-icon">📚</span>
-                        <h3 class="doc-name">BCA Semester 1 Marksheet</h3>
-                        <p class="doc-type">PDF Document</p>
+                    <div class="doc-card-body">
+                        <div class="doc-icon-wrapper">📚</div>
+                        <div class="doc-info">
+                            <h3 class="doc-name">BCA Semester 1 Marksheet</h3>
+                            <p class="doc-type">PDF Document</p>
+                        </div>
                     </div>
-                    <a href="files/Atul BCA Semester 1 Marksheet.pdf" target="_blank" class="doc-action">View Document</a>
+                    <a href="files/Atul BCA Semester 1 Marksheet.pdf" target="_blank" rel="noopener" class="doc-action">View Document ↗</a>
                 </div>
                 <div class="doc-card" data-title="BCA Semester 2 Marksheet bachelor computer applications graduation">
-                    <div>
-                        <span class="doc-icon">📚</span>
-                        <h3 class="doc-name">BCA Semester 2 Marksheet</h3>
-                        <p class="doc-type">PDF Document</p>
+                    <div class="doc-card-body">
+                        <div class="doc-icon-wrapper">📚</div>
+                        <div class="doc-info">
+                            <h3 class="doc-name">BCA Semester 2 Marksheet</h3>
+                            <p class="doc-type">PDF Document</p>
+                        </div>
                     </div>
-                    <a href="files/Atul BCA Semester 2 Marksheet .pdf" target="_blank" class="doc-action">View Document</a>
+                    <a href="files/Atul BCA Semester 2 Marksheet .pdf" target="_blank" rel="noopener" class="doc-action">View Document ↗</a>
                 </div>
                 <div class="doc-card" data-title="BCA Semester 3 Marksheet bachelor computer applications graduation">
-                    <div>
-                        <span class="doc-icon">📚</span>
-                        <h3 class="doc-name">BCA Semester 3 Marksheet</h3>
-                        <p class="doc-type">PDF Document</p>
+                    <div class="doc-card-body">
+                        <div class="doc-icon-wrapper">📚</div>
+                        <div class="doc-info">
+                            <h3 class="doc-name">BCA Semester 3 Marksheet</h3>
+                            <p class="doc-type">PDF Document</p>
+                        </div>
                     </div>
-                    <a href="files/Atul BCA Semester 3 Marksheet .pdf" target="_blank" class="doc-action">View Document</a>
+                    <a href="files/Atul BCA Semester 3 Marksheet .pdf" target="_blank" rel="noopener" class="doc-action">View Document ↗</a>
                 </div>
                 <div class="doc-card" data-title="BCA Semester 6 Marksheet sem-6 bachelor computer applications">
-                    <div>
-                        <span class="doc-icon">📚</span>
-                        <h3 class="doc-name">BCA Semester 6 Marksheet</h3>
-                        <p class="doc-type">PDF Document</p>
+                    <div class="doc-card-body">
+                        <div class="doc-icon-wrapper">📚</div>
+                        <div class="doc-info">
+                            <h3 class="doc-name">BCA Semester 6 Marksheet</h3>
+                            <p class="doc-type">PDF Document</p>
+                        </div>
                     </div>
-                    <a href="files/BCA sem-6 Marksheet.pdf" target="_blank" class="doc-action">View Document</a>
+                    <a href="files/BCA sem-6 Marksheet.pdf" target="_blank" rel="noopener" class="doc-action">View Document ↗</a>
                 </div>
                 <div class="doc-card" data-title="BCA Provisional Certificate graduation bachelor computer applications">
-                    <div>
-                        <span class="doc-icon">🎓</span>
-                        <h3 class="doc-name">BCA Provisional Certificate</h3>
-                        <p class="doc-type">PDF Document</p>
+                    <div class="doc-card-body">
+                        <div class="doc-icon-wrapper">🎓</div>
+                        <div class="doc-info">
+                            <h3 class="doc-name">BCA Provisional Certificate</h3>
+                            <p class="doc-type">PDF Document</p>
+                        </div>
                     </div>
-                    <a href="files/BCA Provisional Certificate.pdf" target="_blank" class="doc-action">View Document</a>
+                    <a href="files/BCA Provisional Certificate.pdf" target="_blank" rel="noopener" class="doc-action">View Document ↗</a>
                 </div>
                 <div class="doc-card" data-title="BCA Degree Certificate bachelor computer applications degree">
-                    <div>
-                        <span class="doc-icon">📜</span>
-                        <h3 class="doc-name">BCA Degree Certificate</h3>
-                        <p class="doc-type">PDF Document</p>
+                    <div class="doc-card-body">
+                        <div class="doc-icon-wrapper">📜</div>
+                        <div class="doc-info">
+                            <h3 class="doc-name">BCA Degree Certificate</h3>
+                            <p class="doc-type">PDF Document</p>
+                        </div>
                     </div>
-                    <a href="files/BCA certificate.pdf" target="_blank" class="doc-action">View Document</a>
+                    <a href="files/BCA certificate.pdf" target="_blank" rel="noopener" class="doc-action">View Document ↗</a>
                 </div>
                 <div class="doc-card" data-title="MCA 4th Semester Marksheet master computer applications post graduation">
-                    <div>
-                        <span class="doc-icon">🎓</span>
-                        <h3 class="doc-name">MCA 4th Semester Marksheet</h3>
-                        <p class="doc-type">PDF Document</p>
+                    <div class="doc-card-body">
+                        <div class="doc-icon-wrapper">🎓</div>
+                        <div class="doc-info">
+                            <h3 class="doc-name">MCA 4th Semester Marksheet</h3>
+                            <p class="doc-type">PDF Document</p>
+                        </div>
                     </div>
-                    <a href="files/MCA 4th Semester Marksheet.pdf" target="_blank" class="doc-action">View Document</a>
+                    <a href="files/MCA 4th Semester Marksheet.pdf" target="_blank" rel="noopener" class="doc-action">View Document ↗</a>
                 </div>
                 <div class="doc-card" data-title="MCA Provisional Certificate master computer applications post graduation degree">
-                    <div>
-                        <span class="doc-icon">📜</span>
-                        <h3 class="doc-name">MCA Provisional Certificate</h3>
-                        <p class="doc-type">PDF Document</p>
+                    <div class="doc-card-body">
+                        <div class="doc-icon-wrapper">📜</div>
+                        <div class="doc-info">
+                            <h3 class="doc-name">MCA Provisional Certificate</h3>
+                            <p class="doc-type">PDF Document</p>
+                        </div>
                     </div>
-                    <a href="files/MCA provisional certificate.pdf" target="_blank" class="doc-action">View Document</a>
+                    <a href="files/MCA provisional certificate.pdf" target="_blank" rel="noopener" class="doc-action">View Document ↗</a>
                 </div>
                 <div class="doc-card" data-title="UGC NET Dec 2025 Certificate national eligibility test NTA qualification">
-                    <div>
-                        <span class="doc-icon">🏆</span>
-                        <h3 class="doc-name">UGC NET Dec 2025 Certificate</h3>
-                        <p class="doc-type">PDF Document</p>
+                    <div class="doc-card-body">
+                        <div class="doc-icon-wrapper">🏆</div>
+                        <div class="doc-info">
+                            <h3 class="doc-name">UGC NET Dec 2025 Certificate</h3>
+                            <p class="doc-type">PDF Document</p>
+                        </div>
                     </div>
-                    <a href="files/UGC NET Dec 2025 Certificate.pdf" target="_blank" class="doc-action">View Document</a>
+                    <a href="files/UGC NET Dec 2025 Certificate.pdf" target="_blank" rel="noopener" class="doc-action">View Document ↗</a>
                 </div>
             </div>
         </section>
@@ -264,16 +325,26 @@
     </div>
 
     <script>
+        let currentCategory = 'all';
+
         function filterDocs() {
-            const input = document.getElementById('searchInput').value.toLowerCase();
+            const input = document.getElementById('searchInput').value.trim().toLowerCase();
+            const clearBtn = document.getElementById('clearBtn');
+            clearBtn.style.display = input ? 'block' : 'none';
+
             const cards = document.querySelectorAll('.doc-card');
             const sections = document.querySelectorAll('.category-section');
             let totalVisible = 0;
 
             cards.forEach(card => {
+                const section = card.closest('.category-section');
+                const catMatch = (currentCategory === 'all' || section.getAttribute('data-cat') === currentCategory);
+
                 const title = card.getAttribute('data-title').toLowerCase();
                 const text = card.innerText.toLowerCase();
-                if (title.includes(input) || text.includes(input)) {
+                const textMatch = !input || title.includes(input) || text.includes(input);
+
+                if (catMatch && textMatch) {
                     card.style.display = 'flex';
                     totalVisible++;
                 } else {
@@ -282,21 +353,40 @@
             });
 
             sections.forEach(section => {
-                const cards = section.querySelectorAll('.doc-card');
-                const hasVisible = Array.from(cards).some(card => card.style.display !== 'none');
-                if (!hasVisible && input !== '') {
-                    section.style.display = 'none';
-                } else {
+                const catMatch = (currentCategory === 'all' || section.getAttribute('data-cat') === currentCategory);
+                const cardsInSection = section.querySelectorAll('.doc-card');
+                const hasVisibleCards = Array.from(cardsInSection).some(c => c.style.display !== 'none');
+
+                if (catMatch && hasVisibleCards) {
                     section.style.display = 'block';
+                } else {
+                    section.style.display = 'none';
                 }
             });
 
             const noResults = document.getElementById('noResults');
-            if (totalVisible === 0) {
-                noResults.style.display = 'block';
-            } else {
-                noResults.style.display = 'none';
+            noResults.style.display = (totalVisible === 0) ? 'block' : 'none';
+        }
+
+        function filterCategory(cat, btn) {
+            currentCategory = cat;
+            document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+            btn.classList.add('active');
+            filterDocs();
+
+            if (cat !== 'all') {
+                const targetSection = document.getElementById('sec-' + cat);
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
             }
+        }
+
+        function clearSearch() {
+            const input = document.getElementById('searchInput');
+            input.value = '';
+            filterDocs();
+            input.focus();
         }
     </script>
 </body>
