@@ -101,7 +101,15 @@ header {
     transform: translateY(-50%);
     color: var(--text-secondary);
     pointer-events: none;
-    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-icon svg {
+    width: 18px;
+    height: 18px;
+    display: block;
 }
 
 .clear-btn {
@@ -112,15 +120,24 @@ header {
     background: none;
     border: none;
     color: var(--text-secondary);
-    font-size: 1.2rem;
     cursor: pointer;
     display: none;
-    padding: 0.2rem 0.5rem;
+    padding: 0.35rem;
     border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
 }
 
 .clear-btn:hover {
     color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.clear-btn svg {
+    width: 16px;
+    height: 16px;
+    display: block;
 }
 
 .search-input:focus {
@@ -184,6 +201,16 @@ header {
     font-size: clamp(1.1rem, 3vw, 1.35rem);
     font-weight: 600;
     color: #e2e8f0;
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+}
+
+.category-title svg {
+    width: 22px;
+    height: 22px;
+    color: var(--badge-text);
+    flex-shrink: 0;
 }
 
 .category-count {
@@ -225,15 +252,22 @@ header {
 }
 
 .doc-icon-wrapper {
-    background: rgba(99, 102, 241, 0.1);
+    background: rgba(99, 102, 241, 0.12);
     border-radius: 10px;
     width: 44px;
     height: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.4rem;
     flex-shrink: 0;
+    color: var(--badge-text);
+}
+
+.doc-icon-wrapper svg {
+    width: 22px;
+    height: 22px;
+    stroke: currentColor;
+    display: block;
 }
 
 .doc-info {
@@ -261,7 +295,7 @@ header {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.4rem;
+    gap: 0.45rem;
     width: 100%;
     min-height: 42px; /* Touch target minimum */
     padding: 0.6rem 1rem;
@@ -272,6 +306,18 @@ header {
     font-size: 0.875rem;
     border-radius: 10px;
     transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.doc-action svg {
+    width: 14px;
+    height: 14px;
+    stroke: currentColor;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+}
+
+.doc-action:hover svg {
+    transform: translate(2px, -2px);
 }
 
 .doc-action:hover {

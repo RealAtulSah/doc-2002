@@ -22,12 +22,22 @@
         <!-- Sticky Controls: Search Input & Category Filter Chips -->
         <div class="sticky-controls">
             <div class="search-container">
-                <span class="search-icon">🔍</span>
-                <input type="text" id="searchInput" class="search-input" placeholder="Search (e.g. MCA, Aadhaar, OBC, 10th)..." oninput="filterDocs()">
-                <button type="button" id="clearBtn" class="clear-btn" onclick="clearSearch()" aria-label="Clear Search">&times;</button>
+                <span class="search-icon" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </span>
+                <input type="text" id="searchInput" class="search-input" placeholder="Search (e.g. MCA, Aadhaar, OBC, 10th, STET, NET)..." oninput="filterDocs()" aria-label="Search documents">
+                <button type="button" id="clearBtn" class="clear-btn" onclick="clearSearch()" aria-label="Clear Search">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
             </div>
             <div class="filter-chips">
-                <button type="button" class="chip active" onclick="filterCategory('all', this)">All (24)</button>
+                <button type="button" class="chip active" onclick="filterCategory('all', this)">All (28)</button>
                 <button type="button" class="chip" onclick="filterCategory('personal', this)">Personal & ID</button>
                 <button type="button" class="chip" onclick="filterCategory('govt', this)">Government & Caste</button>
                 <button type="button" class="chip" onclick="filterCategory('school', this)">10th & 12th</button>
@@ -38,69 +48,158 @@
         <!-- Personal & Identity -->
         <section id="sec-personal" class="category-section" data-cat="personal">
             <div class="category-header">
-                <h2 class="category-title">👤 Personal Identity & Resume</h2>
+                <h2 class="category-title">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    Personal Identity & Resume
+                </h2>
                 <span class="category-count">6 Docs</span>
             </div>
             <div class="doc-grid">
-                <div class="doc-card" data-title="Passport size Photo image picture photo">
+                <div class="doc-card" data-title="Passport size Photo image picture photo Atul Sah">
                     <div class="doc-card-body">
-                        <div class="doc-icon-wrapper">🖼️</div>
+                        <div class="doc-icon-wrapper" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                        </div>
                         <div class="doc-info">
                             <h3 class="doc-name">Passport Size Photo</h3>
                             <p class="doc-type">JPEG Image</p>
                         </div>
                     </div>
-                    <a href="files/Atul_Photo.jpeg" target="_blank" rel="noopener" class="doc-action">View Image ↗</a>
+                    <a href="files/Atul_Photo.jpeg" target="_blank" rel="noopener" class="doc-action">
+                        <span>View Image</span>
+                        <svg class="action-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
                 </div>
-                <div class="doc-card" data-title="Signature sign image picture">
+                <div class="doc-card" data-title="Signature sign image picture Atul Sah">
                     <div class="doc-card-body">
-                        <div class="doc-icon-wrapper">✍️</div>
+                        <div class="doc-icon-wrapper" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                                <path d="M2 2l7.586 7.586"></path>
+                                <circle cx="11" cy="11" r="2"></circle>
+                            </svg>
+                        </div>
                         <div class="doc-info">
                             <h3 class="doc-name">Digital Signature</h3>
                             <p class="doc-type">JPEG Image</p>
                         </div>
                     </div>
-                    <a href="files/Atul_Sign.jpeg" target="_blank" rel="noopener" class="doc-action">View Image ↗</a>
+                    <a href="files/Atul_Sign.jpeg" target="_blank" rel="noopener" class="doc-action">
+                        <span>View Image</span>
+                        <svg class="action-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
                 </div>
-                <div class="doc-card" data-title="Aadhaar Card eAadhaar identity UIDAI">
+                <div class="doc-card" data-title="Aadhaar Card eAadhaar identity UIDAI Atul Sah">
                     <div class="doc-card-body">
-                        <div class="doc-icon-wrapper">🪪</div>
+                        <div class="doc-icon-wrapper" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                <circle cx="8" cy="11" r="2.5"></circle>
+                                <path d="M4 17a4 4 0 0 1 8 0"></path>
+                                <line x1="15" y1="9" x2="19" y2="9"></line>
+                                <line x1="15" y1="13" x2="19" y2="13"></line>
+                            </svg>
+                        </div>
                         <div class="doc-info">
                             <h3 class="doc-name">Aadhaar Card</h3>
                             <p class="doc-type">PDF Document</p>
                         </div>
                     </div>
-                    <a href="files/atul_eaadhaar.pdf" target="_blank" rel="noopener" class="doc-action">View Document ↗</a>
+                    <a href="files/atul_eaadhaar.pdf" target="_blank" rel="noopener" class="doc-action">
+                        <span>View Document</span>
+                        <svg class="action-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
                 </div>
-                <div class="doc-card" data-title="PAN Card income tax identity">
+                <div class="doc-card" data-title="PAN Card income tax identity Atul Sah">
                     <div class="doc-card-body">
-                        <div class="doc-icon-wrapper">💳</div>
+                        <div class="doc-icon-wrapper" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                                <line x1="1" y1="10" x2="23" y2="10"></line>
+                            </svg>
+                        </div>
                         <div class="doc-info">
                             <h3 class="doc-name">PAN Card</h3>
                             <p class="doc-type">PDF Document</p>
                         </div>
                     </div>
-                    <a href="files/Atul PAN.pdf" target="_blank" rel="noopener" class="doc-action">View Document ↗</a>
+                    <a href="files/Atul PAN.pdf" target="_blank" rel="noopener" class="doc-action">
+                        <span>View Document</span>
+                        <svg class="action-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
                 </div>
-                <div class="doc-card" data-title="Driving License DL license transport">
+                <div class="doc-card" data-title="Driving License DL license transport motor vehicle Atul Sah">
                     <div class="doc-card-body">
-                        <div class="doc-icon-wrapper">🚗</div>
+                        <div class="doc-icon-wrapper" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="1" y="3" width="15" height="13" rx="1"></rect>
+                                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                            </svg>
+                        </div>
                         <div class="doc-info">
                             <h3 class="doc-name">Driving License</h3>
                             <p class="doc-type">PDF Document</p>
                         </div>
                     </div>
-                    <a href="files/atul_dl.pdf" target="_blank" rel="noopener" class="doc-action">View Document ↗</a>
+                    <a href="files/atul_dl.pdf" target="_blank" rel="noopener" class="doc-action">
+                        <span>View Document</span>
+                        <svg class="action-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
                 </div>
-                <div class="doc-card" data-title="Atul Sah Resume CV bio data profile">
+                <div class="doc-card" data-title="Atul Sah Resume CV bio data profile curriculum vitae">
                     <div class="doc-card-body">
-                        <div class="doc-icon-wrapper">📄</div>
+                        <div class="doc-icon-wrapper" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <line x1="10" y1="9" x2="8" y2="9"></line>
+                            </svg>
+                        </div>
                         <div class="doc-info">
                             <h3 class="doc-name">Atul Sah Resume</h3>
                             <p class="doc-type">PDF Document</p>
                         </div>
                     </div>
-                    <a href="files/Atul Sah Resume.pdf" target="_blank" rel="noopener" class="doc-action">View Document ↗</a>
+                    <a href="files/Atul Sah Resume.pdf" target="_blank" rel="noopener" class="doc-action">
+                        <span>View Document</span>
+                        <svg class="action-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </section>
@@ -108,59 +207,139 @@
         <!-- Government & Category Certificates -->
         <section id="sec-govt" class="category-section" data-cat="govt">
             <div class="category-header">
-                <h2 class="category-title">📜 Government & Category Certificates</h2>
+                <h2 class="category-title">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M3 21h18"></path>
+                        <path d="M3 10h18"></path>
+                        <path d="M5 6l7-3 7 3"></path>
+                        <path d="M4 10v11"></path>
+                        <path d="M20 10v11"></path>
+                        <path d="M8 14v4"></path>
+                        <path d="M12 14v4"></path>
+                        <path d="M16 14v4"></path>
+                    </svg>
+                    Government & Category Certificates
+                </h2>
                 <span class="category-count">5 Docs</span>
             </div>
             <div class="doc-grid">
-                <div class="doc-card" data-title="Caste Certificate category Bihar">
+                <div class="doc-card" data-title="Caste Certificate category Bihar revenue officer">
                     <div class="doc-card-body">
-                        <div class="doc-icon-wrapper">🏛️</div>
+                        <div class="doc-icon-wrapper" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 21h18"></path>
+                                <path d="M3 10h18"></path>
+                                <path d="M5 6l7-3 7 3"></path>
+                                <path d="M4 10v11"></path>
+                                <path d="M20 10v11"></path>
+                                <path d="M8 14v4"></path>
+                                <path d="M12 14v4"></path>
+                                <path d="M16 14v4"></path>
+                            </svg>
+                        </div>
                         <div class="doc-info">
                             <h3 class="doc-name">Caste Certificate</h3>
                             <p class="doc-type">PDF Document</p>
                         </div>
                     </div>
-                    <a href="files/caste new.pdf" target="_blank" rel="noopener" class="doc-action">View Document ↗</a>
+                    <a href="files/caste new.pdf" target="_blank" rel="noopener" class="doc-action">
+                        <span>View Document</span>
+                        <svg class="action-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
                 </div>
-                <div class="doc-card" data-title="Income Certificate 2026 2027">
+                <div class="doc-card" data-title="Income Certificate 2026 2027 Bihar revenue officer">
                     <div class="doc-card-body">
-                        <div class="doc-icon-wrapper">💵</div>
+                        <div class="doc-icon-wrapper" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="6" width="20" height="12" rx="2"></rect>
+                                <circle cx="12" cy="12" r="2"></circle>
+                                <path d="M6 12h.01M18 12h.01"></path>
+                            </svg>
+                        </div>
                         <div class="doc-info">
                             <h3 class="doc-name">Income Certificate (2026-27)</h3>
                             <p class="doc-type">PDF Document</p>
                         </div>
                     </div>
-                    <a href="files/Income Certificate 2026-27.pdf" target="_blank" rel="noopener" class="doc-action">View Document ↗</a>
+                    <a href="files/Income Certificate 2026-27.pdf" target="_blank" rel="noopener" class="doc-action">
+                        <span>View Document</span>
+                        <svg class="action-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
                 </div>
-                <div class="doc-card" data-title="OBC NCL Certificate 2026 Bihar state">
+                <div class="doc-card" data-title="OBC NCL Certificate 2026 Bihar state non creamy layer other backward class">
                     <div class="doc-card-body">
-                        <div class="doc-icon-wrapper">📋</div>
+                        <div class="doc-icon-wrapper" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                <polyline points="9 12 11 14 15 10"></polyline>
+                            </svg>
+                        </div>
                         <div class="doc-info">
                             <h3 class="doc-name">OBC NCL Certificate 2026 (Bihar)</h3>
                             <p class="doc-type">PDF Document</p>
                         </div>
                     </div>
-                    <a href="files/Atul OBC NCL Certificate 2026 Bihar.pdf" target="_blank" rel="noopener" class="doc-action">View Document ↗</a>
+                    <a href="files/Atul OBC NCL Certificate 2026 Bihar.pdf" target="_blank" rel="noopener" class="doc-action">
+                        <span>View Document</span>
+                        <svg class="action-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
                 </div>
-                <div class="doc-card" data-title="OBC NCL Certificate 2026 India central government">
+                <div class="doc-card" data-title="OBC NCL Certificate 2026 India central government non creamy layer other backward class">
                     <div class="doc-card-body">
-                        <div class="doc-icon-wrapper">🌐</div>
+                        <div class="doc-icon-wrapper" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                            </svg>
+                        </div>
                         <div class="doc-info">
                             <h3 class="doc-name">OBC NCL Certificate 2026 (India)</h3>
                             <p class="doc-type">PDF Document</p>
                         </div>
                     </div>
-                    <a href="files/Atul OBC NCL Certificate 2026 India.pdf" target="_blank" rel="noopener" class="doc-action">View Document ↗</a>
+                    <a href="files/Atul OBC NCL Certificate 2026 India.pdf" target="_blank" rel="noopener" class="doc-action">
+                        <span>View Document</span>
+                        <svg class="action-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
                 </div>
-                <div class="doc-card" data-title="Residential Certificate Residence Domicile address Bihar">
+                <div class="doc-card" data-title="Residential Certificate Residence Domicile address Bihar niwas praman patra">
                     <div class="doc-card-body">
-                        <div class="doc-icon-wrapper">🏡</div>
+                        <div class="doc-icon-wrapper" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                            </svg>
+                        </div>
                         <div class="doc-info">
                             <h3 class="doc-name">Residence Certificate</h3>
                             <p class="doc-type">PDF Document</p>
                         </div>
                     </div>
-                    <a href="files/Residential Certificate.pdf" target="_blank" rel="noopener" class="doc-action">View Document ↗</a>
+                    <a href="files/Residential Certificate.pdf" target="_blank" rel="noopener" class="doc-action">
+                        <span>View Document</span>
+                        <svg class="action-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </section>
@@ -168,149 +347,418 @@
         <!-- Secondary & Senior Secondary Education -->
         <section id="sec-school" class="category-section" data-cat="school">
             <div class="category-header">
-                <h2 class="category-title">🎓 School Education (10th & 12th)</h2>
+                <h2 class="category-title">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                        <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                    </svg>
+                    School Education (10th & 12th)
+                </h2>
                 <span class="category-count">4 Docs</span>
             </div>
             <div class="doc-grid">
-                <div class="doc-card" data-title="10th Certificate matriculation school board">
+                <div class="doc-card" data-title="10th Certificate matriculation school board high school">
                     <div class="doc-card-body">
-                        <div class="doc-icon-wrapper">📜</div>
+                        <div class="doc-icon-wrapper" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="8" r="6"></circle>
+                                <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"></path>
+                            </svg>
+                        </div>
                         <div class="doc-info">
                             <h3 class="doc-name">10th Certificate</h3>
                             <p class="doc-type">PDF Document</p>
                         </div>
                     </div>
-                    <a href="files/Atul 10th Certificate.pdf" target="_blank" rel="noopener" class="doc-action">View Document ↗</a>
+                    <a href="files/Atul 10th Certificate.pdf" target="_blank" rel="noopener" class="doc-action">
+                        <span>View Document</span>
+                        <svg class="action-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
                 </div>
-                <div class="doc-card" data-title="10th Marksheet matriculation marks school">
+                <div class="doc-card" data-title="10th Marksheet matriculation marks school grade sheet">
                     <div class="doc-card-body">
-                        <div class="doc-icon-wrapper">📊</div>
+                        <div class="doc-icon-wrapper" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="18" y1="20" x2="18" y2="10"></line>
+                                <line x1="12" y1="20" x2="12" y2="4"></line>
+                                <line x1="6" y1="20" x2="6" y2="14"></line>
+                            </svg>
+                        </div>
                         <div class="doc-info">
                             <h3 class="doc-name">10th Marksheet</h3>
                             <p class="doc-type">PDF Document</p>
                         </div>
                     </div>
-                    <a href="files/Atul 10th Marksheet.pdf" target="_blank" rel="noopener" class="doc-action">View Document ↗</a>
+                    <a href="files/Atul 10th Marksheet.pdf" target="_blank" rel="noopener" class="doc-action">
+                        <span>View Document</span>
+                        <svg class="action-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
                 </div>
-                <div class="doc-card" data-title="12th Provisional Certificate intermediate school board">
+                <div class="doc-card" data-title="12th Provisional Certificate intermediate school board senior secondary">
                     <div class="doc-card-body">
-                        <div class="doc-icon-wrapper">🎓</div>
+                        <div class="doc-icon-wrapper" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                            </svg>
+                        </div>
                         <div class="doc-info">
                             <h3 class="doc-name">12th Provisional Certificate</h3>
                             <p class="doc-type">PDF Document</p>
                         </div>
                     </div>
-                    <a href="files/Atul 12th Provisional Certificate .pdf" target="_blank" rel="noopener" class="doc-action">View Document ↗</a>
+                    <a href="files/Atul 12th Provisional Certificate .pdf" target="_blank" rel="noopener" class="doc-action">
+                        <span>View Document</span>
+                        <svg class="action-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
                 </div>
-                <div class="doc-card" data-title="12th Marksheet intermediate marks school">
+                <div class="doc-card" data-title="12th Marksheet intermediate marks school senior secondary grade sheet">
                     <div class="doc-card-body">
-                        <div class="doc-icon-wrapper">📈</div>
+                        <div class="doc-icon-wrapper" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                                <polyline points="17 6 23 6 23 12"></polyline>
+                            </svg>
+                        </div>
                         <div class="doc-info">
                             <h3 class="doc-name">12th Marksheet</h3>
                             <p class="doc-type">PDF Document</p>
                         </div>
                     </div>
-                    <a href="files/Atul 12th marksheet.pdf" target="_blank" rel="noopener" class="doc-action">View Document ↗</a>
+                    <a href="files/Atul 12th marksheet.pdf" target="_blank" rel="noopener" class="doc-action">
+                        <span>View Document</span>
+                        <svg class="action-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- Higher Education & Competitive Exams -->
+        <!-- Higher Education & National / State Exams -->
         <section id="sec-higher" class="category-section" data-cat="higher">
             <div class="category-header">
-                <h2 class="category-title">🏛️ Higher Education & National Exams</h2>
-                <span class="category-count">9 Docs</span>
+                <h2 class="category-title">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="12" cy="8" r="7"></circle>
+                        <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                    </svg>
+                    Higher Education & National Exams
+                </h2>
+                <span class="category-count">13 Docs</span>
             </div>
             <div class="doc-grid">
-                <div class="doc-card" data-title="BCA Semester 1 Marksheet bachelor computer applications graduation">
+                <!-- BCA Marksheets and Degrees -->
+                <div class="doc-card" data-title="BCA Semester 1 Marksheet bachelor computer applications graduation sem 1 first">
                     <div class="doc-card-body">
-                        <div class="doc-icon-wrapper">📚</div>
+                        <div class="doc-icon-wrapper" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                            </svg>
+                        </div>
                         <div class="doc-info">
                             <h3 class="doc-name">BCA Semester 1 Marksheet</h3>
                             <p class="doc-type">PDF Document</p>
                         </div>
                     </div>
-                    <a href="files/Atul BCA Semester 1 Marksheet.pdf" target="_blank" rel="noopener" class="doc-action">View Document ↗</a>
+                    <a href="files/Atul BCA Semester 1 Marksheet.pdf" target="_blank" rel="noopener" class="doc-action">
+                        <span>View Document</span>
+                        <svg class="action-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
                 </div>
-                <div class="doc-card" data-title="BCA Semester 2 Marksheet bachelor computer applications graduation">
+                <div class="doc-card" data-title="BCA Semester 2 Marksheet bachelor computer applications graduation sem 2 second">
                     <div class="doc-card-body">
-                        <div class="doc-icon-wrapper">📚</div>
+                        <div class="doc-icon-wrapper" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                            </svg>
+                        </div>
                         <div class="doc-info">
                             <h3 class="doc-name">BCA Semester 2 Marksheet</h3>
                             <p class="doc-type">PDF Document</p>
                         </div>
                     </div>
-                    <a href="files/Atul BCA Semester 2 Marksheet .pdf" target="_blank" rel="noopener" class="doc-action">View Document ↗</a>
+                    <a href="files/Atul BCA Semester 2 Marksheet .pdf" target="_blank" rel="noopener" class="doc-action">
+                        <span>View Document</span>
+                        <svg class="action-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
                 </div>
-                <div class="doc-card" data-title="BCA Semester 3 Marksheet bachelor computer applications graduation">
+                <div class="doc-card" data-title="BCA Semester 3 Marksheet bachelor computer applications graduation sem 3 third">
                     <div class="doc-card-body">
-                        <div class="doc-icon-wrapper">📚</div>
+                        <div class="doc-icon-wrapper" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                            </svg>
+                        </div>
                         <div class="doc-info">
                             <h3 class="doc-name">BCA Semester 3 Marksheet</h3>
                             <p class="doc-type">PDF Document</p>
                         </div>
                     </div>
-                    <a href="files/Atul BCA Semester 3 Marksheet .pdf" target="_blank" rel="noopener" class="doc-action">View Document ↗</a>
+                    <a href="files/Atul BCA Semester 3 Marksheet .pdf" target="_blank" rel="noopener" class="doc-action">
+                        <span>View Document</span>
+                        <svg class="action-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
                 </div>
-                <div class="doc-card" data-title="BCA Semester 6 Marksheet sem-6 bachelor computer applications">
+                <div class="doc-card" data-title="BCA Semester 6 Marksheet sem-6 bachelor computer applications final semester">
                     <div class="doc-card-body">
-                        <div class="doc-icon-wrapper">📚</div>
+                        <div class="doc-icon-wrapper" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                            </svg>
+                        </div>
                         <div class="doc-info">
                             <h3 class="doc-name">BCA Semester 6 Marksheet</h3>
                             <p class="doc-type">PDF Document</p>
                         </div>
                     </div>
-                    <a href="files/BCA sem-6 Marksheet.pdf" target="_blank" rel="noopener" class="doc-action">View Document ↗</a>
+                    <a href="files/BCA sem-6 Marksheet.pdf" target="_blank" rel="noopener" class="doc-action">
+                        <span>View Document</span>
+                        <svg class="action-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
                 </div>
-                <div class="doc-card" data-title="BCA Provisional Certificate graduation bachelor computer applications">
+                <div class="doc-card" data-title="BCA Provisional Certificate graduation bachelor computer applications TMBU">
                     <div class="doc-card-body">
-                        <div class="doc-icon-wrapper">🎓</div>
+                        <div class="doc-icon-wrapper" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                            </svg>
+                        </div>
                         <div class="doc-info">
                             <h3 class="doc-name">BCA Provisional Certificate</h3>
                             <p class="doc-type">PDF Document</p>
                         </div>
                     </div>
-                    <a href="files/BCA Provisional Certificate.pdf" target="_blank" rel="noopener" class="doc-action">View Document ↗</a>
+                    <a href="files/BCA Provisional Certificate.pdf" target="_blank" rel="noopener" class="doc-action">
+                        <span>View Document</span>
+                        <svg class="action-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
                 </div>
-                <div class="doc-card" data-title="BCA Degree Certificate bachelor computer applications degree">
+                <div class="doc-card" data-title="BCA Degree Certificate bachelor computer applications degree graduation TMBU">
                     <div class="doc-card-body">
-                        <div class="doc-icon-wrapper">📜</div>
+                        <div class="doc-icon-wrapper" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="8" r="6"></circle>
+                                <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"></path>
+                            </svg>
+                        </div>
                         <div class="doc-info">
                             <h3 class="doc-name">BCA Degree Certificate</h3>
                             <p class="doc-type">PDF Document</p>
                         </div>
                     </div>
-                    <a href="files/BCA certificate.pdf" target="_blank" rel="noopener" class="doc-action">View Document ↗</a>
+                    <a href="files/BCA certificate.pdf" target="_blank" rel="noopener" class="doc-action">
+                        <span>View Document</span>
+                        <svg class="action-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
                 </div>
-                <div class="doc-card" data-title="MCA 4th Semester Marksheet master computer applications post graduation">
+                <div class="doc-card" data-title="BCA Equivalent Certificate bachelor computer applications equivalence qualification degree university TMBU">
                     <div class="doc-card-body">
-                        <div class="doc-icon-wrapper">🎓</div>
+                        <div class="doc-icon-wrapper" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <path d="M9 15l2 2 4-4"></path>
+                            </svg>
+                        </div>
+                        <div class="doc-info">
+                            <h3 class="doc-name">BCA Equivalent Certificate</h3>
+                            <p class="doc-type">PDF Document</p>
+                        </div>
+                    </div>
+                    <a href="files/BCA Equivalent Certificate.pdf" target="_blank" rel="noopener" class="doc-action">
+                        <span>View Document</span>
+                        <svg class="action-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- MCA Marksheet and Degrees -->
+                <div class="doc-card" data-title="MCA 4th Semester Marksheet master computer applications post graduation sem 4 final IGNOU">
+                    <div class="doc-card-body">
+                        <div class="doc-icon-wrapper" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                            </svg>
+                        </div>
                         <div class="doc-info">
                             <h3 class="doc-name">MCA 4th Semester Marksheet</h3>
                             <p class="doc-type">PDF Document</p>
                         </div>
                     </div>
-                    <a href="files/MCA 4th Semester Marksheet.pdf" target="_blank" rel="noopener" class="doc-action">View Document ↗</a>
+                    <a href="files/MCA 4th Semester Marksheet.pdf" target="_blank" rel="noopener" class="doc-action">
+                        <span>View Document</span>
+                        <svg class="action-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
                 </div>
-                <div class="doc-card" data-title="MCA Provisional Certificate master computer applications post graduation degree">
+                <div class="doc-card" data-title="MCA Provisional Certificate master computer applications post graduation degree IGNOU">
                     <div class="doc-card-body">
-                        <div class="doc-icon-wrapper">📜</div>
+                        <div class="doc-icon-wrapper" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                            </svg>
+                        </div>
                         <div class="doc-info">
                             <h3 class="doc-name">MCA Provisional Certificate</h3>
                             <p class="doc-type">PDF Document</p>
                         </div>
                     </div>
-                    <a href="files/MCA provisional certificate.pdf" target="_blank" rel="noopener" class="doc-action">View Document ↗</a>
+                    <a href="files/MCA provisional certificate.pdf" target="_blank" rel="noopener" class="doc-action">
+                        <span>View Document</span>
+                        <svg class="action-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
                 </div>
-                <div class="doc-card" data-title="UGC NET Dec 2025 Certificate national eligibility test NTA qualification">
+                <div class="doc-card" data-title="MCA Degree Certificate master computer applications post graduation degree convocation IGNOU">
                     <div class="doc-card-body">
-                        <div class="doc-icon-wrapper">🏆</div>
+                        <div class="doc-icon-wrapper" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="8" r="6"></circle>
+                                <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"></path>
+                            </svg>
+                        </div>
+                        <div class="doc-info">
+                            <h3 class="doc-name">MCA Degree Certificate</h3>
+                            <p class="doc-type">PDF Document</p>
+                        </div>
+                    </div>
+                    <a href="files/MCA certificate.pdf" target="_blank" rel="noopener" class="doc-action">
+                        <span>View Document</span>
+                        <svg class="action-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- National & State Eligibility Exams -->
+                <div class="doc-card" data-title="UGC NET Dec 2025 Certificate national eligibility test NTA qualification JRF Assistant Professor">
+                    <div class="doc-card-body">
+                        <div class="doc-icon-wrapper" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                                <path d="M4 22h16"></path>
+                                <path d="M10 14.66V17c0 .55-.45 1-1 1H8c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1h8c.55 0 1-.45 1-1v-1c0-.55-.45-1-1-1h-1c-.55 0-1-.45-1-1v-2.34"></path>
+                                <path d="M18 2H6v7a6 6 0 0 0 12 0V2z"></path>
+                            </svg>
+                        </div>
                         <div class="doc-info">
                             <h3 class="doc-name">UGC NET Dec 2025 Certificate</h3>
                             <p class="doc-type">PDF Document</p>
                         </div>
                     </div>
-                    <a href="files/UGC NET Dec 2025 Certificate.pdf" target="_blank" rel="noopener" class="doc-action">View Document ↗</a>
+                    <a href="files/UGC NET Dec 2025 Certificate.pdf" target="_blank" rel="noopener" class="doc-action">
+                        <span>View Document</span>
+                        <svg class="action-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
+                </div>
+                <div class="doc-card" data-title="UGC NET June 2026 Certificate national eligibility test NTA qualification JRF Assistant Professor Computer Science">
+                    <div class="doc-card-body">
+                        <div class="doc-icon-wrapper" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                                <path d="M4 22h16"></path>
+                                <path d="M10 14.66V17c0 .55-.45 1-1 1H8c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1h8c.55 0 1-.45 1-1v-1c0-.55-.45-1-1-1h-1c-.55 0-1-.45-1-1v-2.34"></path>
+                                <path d="M18 2H6v7a6 6 0 0 0 12 0V2z"></path>
+                            </svg>
+                        </div>
+                        <div class="doc-info">
+                            <h3 class="doc-name">UGC NET June 2026 Certificate</h3>
+                            <p class="doc-type">PDF Document</p>
+                        </div>
+                    </div>
+                    <a href="files/UGC NET June 2026 Certificate.pdf" target="_blank" rel="noopener" class="doc-action">
+                        <span>View Document</span>
+                        <svg class="action-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
+                </div>
+                <div class="doc-card" data-title="BSEB STET Dec 2025 Certificate Bihar School Examination Board State Teacher Eligibility Test paper 2 computer science scorecard">
+                    <div class="doc-card-body">
+                        <div class="doc-icon-wrapper" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                <path d="M9 12l2 2 4-4"></path>
+                            </svg>
+                        </div>
+                        <div class="doc-info">
+                            <h3 class="doc-name">BSEB STET Dec 2025 Certificate</h3>
+                            <p class="doc-type">PDF Document</p>
+                        </div>
+                    </div>
+                    <a href="files/BSEB STET Dec 2025.pdf" target="_blank" rel="noopener" class="doc-action">
+                        <span>View Document</span>
+                        <svg class="action-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </section>
@@ -330,7 +778,7 @@
         function filterDocs() {
             const input = document.getElementById('searchInput').value.trim().toLowerCase();
             const clearBtn = document.getElementById('clearBtn');
-            clearBtn.style.display = input ? 'block' : 'none';
+            clearBtn.style.display = input ? 'flex' : 'none';
 
             const cards = document.querySelectorAll('.doc-card');
             const sections = document.querySelectorAll('.category-section');
